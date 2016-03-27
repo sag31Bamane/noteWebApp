@@ -43,5 +43,8 @@ public class NoteService{
 			System.out.println("Exception Error"); //Console 
 			}
 			return feeds;
+		}
+	
+	}
 }
 
