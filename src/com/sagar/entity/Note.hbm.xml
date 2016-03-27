@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2016 5:13:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sagar.entity.Note" table="NOTE">
+        <id name="id" type="long">
+            <column name="ID_NOTE" />
+            <generator class="identity" />
+        </id>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE" />
+        </property>
+        <property name="note" type="java.lang.String">
+            <column name="NOTE" />
+        </property>
+        <property name="creationTime" type="java.sql.Date">
+            <column name="CREATIONTIME" />
+        </property>
+        <property name="lastModTime" type="java.sql.Date">
+            <column name="LASTMODTIME" />
+        </property>
+        <many-to-one name="user" class="com.sagar.entity.User" fetch="join">
+            <column name="ID_USER" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
