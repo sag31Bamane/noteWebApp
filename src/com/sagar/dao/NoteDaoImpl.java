@@ -2,6 +2,8 @@ package com.sagar.dao;
 
 import java.util.List;
 
+import org.hibernate.secure.HibernatePermission;
+
 import com.sagar.entity.Note;
 import com.sagar.entity.User;
 
